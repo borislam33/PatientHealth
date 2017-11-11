@@ -1,5 +1,5 @@
 ﻿
-var insertedPatient = { FirstName: "John", LastName: "Doe", Address: "Canada", DateOfBirth: "10/11/12", PhoneNumber: "123-412-2314" };
+var insertedPatient = { FirstName: "John", LastName: "Doe", Address: "Canada", DateOfBirth: "10/11/12", PhoneNumber: "123-412-2314", Username: "jdoe"};
 var patient;
 function GetPatient(PatientID) {
     console.log(PatientID);

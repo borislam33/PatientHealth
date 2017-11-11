@@ -35,12 +35,13 @@ namespace WebApplication1.Repositories
             {
                 try
                 {
-                    db.Database.ExecuteSqlCommand("EXEC [health].[InsertTest] @FirstName=@FirstName, @LastName=@LastName, @Address=@Address, @DateOfBirth=@DateOfBirth, @PhoneNumber=@PhoneNumber",
+                    db.Database.ExecuteSqlCommand("EXEC [health].[InsertNewPatient] @FirstName=@FirstName, @LastName=@LastName, @Address=@Address, @DateOfBirth=@DateOfBirth, @PhoneNumber=@PhoneNumber, @Username=@Username",
                         new SqlParameter("@FirstName", patient.FirstName),
                         new SqlParameter("@LastName", patient.LastName),
                         new SqlParameter("@Address", patient.Address),
                         new SqlParameter("@DateOfBirth", patient.DateOfBirth),
-                        new SqlParameter("@PhoneNumber", patient.PhoneNumber));
+                        new SqlParameter("@PhoneNumber", patient.PhoneNumber),
+                        new SqlParameter("@Username", patient.Username));
                 }
                 catch (DbEntityValidationException ex)
                 {
